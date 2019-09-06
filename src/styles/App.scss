@@ -1,4 +1,8 @@
 @import "search";
+@import "_header";
+@import "_aside";
+@import "_result";
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +11,12 @@
 
 .App {
   text-align: center;
+  background-image: url("../img/sky-699697_1280.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 20vh 1fr 1fr;
 }
