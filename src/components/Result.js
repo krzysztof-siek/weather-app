@@ -21,7 +21,6 @@ const Result = props => {
 
   return (
     <div className="Result">
-      <h1>Welcome from Result</h1>
       <h2>Sprawdzasz pogodę w mieście: {city}</h2>
       <h3>Temperatura to: {temp}</h3>
       <h3>Ciśnienie to: {pressure}</h3>
@@ -40,7 +39,7 @@ const Result = props => {
       <h3>Kraj: {country}</h3>
       <h3>
         wschód o: {sunset} zachów {sunrise}
-      </h3>
+      </h3>{" "}
     </div>
   );
 };
