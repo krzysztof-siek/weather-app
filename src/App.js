@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Header from "./components/Header";
 import Result from "./components/Result";
-import Aside from "./components/Aside";
 import image1 from "./img/1.jpg";
 import image2 from "./img/2.jpg";
 import image3 from "./img/3.jpg";
@@ -15,7 +14,7 @@ class App extends Component {
     err: true,
     weather: {},
     input: "",
-    image: image2
+    image: image1
   };
   checkWeather = data => {
     console.log(data.input);
@@ -39,8 +38,12 @@ class App extends Component {
       this.setState({image: image2});
     } else if (this.state.weather.main === "Clear") {
       this.setState({image: image6});
-    } else {
+    } else if (this.state.weather.main === "Thunderstorm") {
+      this.setState({image: image4});
+    } else if (this.state.weather.main === "Snow") {
       this.setState({image: image5});
+    } else {
+      this.setState({image: image1});
     }
   };
 
@@ -50,7 +53,6 @@ class App extends Component {
         className="App"
         style={{backgroundImage: `url(${this.state.image})`}}>
         <Header check={this.checkWeather} />
-        <Aside />
         {this.state.err ? (
           <h2>Brak danych </h2>
         ) : (

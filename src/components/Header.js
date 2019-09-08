@@ -1,11 +1,18 @@
 import React, {Component} from "react";
+// import Time from "./Time";
 
 const APIKey = "87f583735f7285d1017d75c8c9331a32";
 class Header extends Component {
   state = {
     input: "",
     err: true,
-    weather: []
+    weather: [],
+    hours: "",
+    minutes: "",
+    seconds: "",
+    day: "",
+    month: "",
+    year: ""
   };
 
   weatherRequest = () => {
@@ -51,16 +58,72 @@ class Header extends Component {
     this.setState({input: e.target.value});
   };
 
+  getTime = () => {
+    let time = new Date();
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
+    let seconds = time.getSeconds();
+    let day = time.getDay();
+    let month = time.getMonth();
+    let year = time.getFullYear();
+    let monthDay = time.getDate();
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    this.setState({hours, minutes, seconds, day, month, monthDay, year});
+  };
+
+  componentDidMount() {
+    setInterval(this.getTime, 1000);
+  }
+
   render() {
+    const days = [
+      "Poniedziałek",
+      "Wtorek",
+      "Środa",
+      "Czwartek",
+      "Piątek",
+      "Sobota",
+      "Niedziela"
+    ];
+    const months = [
+      "Styczeń",
+      "Luty",
+      "Marzec",
+      "Kwiecień",
+      "Maj",
+      "Czerwiec",
+      "Lipiec",
+      "Sierpień",
+      "Wrzesień",
+      "Październik",
+      "Listopad",
+      "Grudzień"
+    ];
     return (
       <div className="Header">
-        <h1>Aplikacja Pogodowa!</h1>
+        <div className="time">
+          <p>{days[this.state.day]}</p>
+          <p>
+            {this.state.monthDay} <span> </span>
+            {months[this.state.month]}
+            {this.state.year}
+          </p>
+          <p className="hour">
+            {this.state.hours}:{this.state.minutes}:{this.state.seconds}
+          </p>
+        </div>
         <input
           className="Header-input"
           type="text"
           placeholder="Wpisz miasto"
           onChange={this.inputHandler}
         />
+        <h1>Aplikacja Pogodowa!</h1>
       </div>
     );
   }

@@ -5,41 +5,27 @@ const Result = props => {
     temp,
     pressure,
     city,
-    max,
-    min,
-    visibility,
     wind_speed,
-    wind_deg,
-    clouds,
+
     main,
-    desctription,
+
     icon,
-    country,
-    sunrise,
-    sunset
+    country
   } = props.weather;
+  const iconSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   return (
     <div className="Result">
-      <h2>Sprawdzasz pogodę w mieście: {city}</h2>
-      <h3>Temperatura to: {temp}</h3>
-      <h3>Ciśnienie to: {pressure}</h3>
-      <h3>
-        Max temp:{max} a min to: {min}
-      </h3>
-      <h3>Widoczność : {visibility}</h3>
-      <h3>
-        Prędkość wiatru: {wind_speed} oraz {wind_deg}
-      </h3>
-      <h3>Chmury: {clouds}</h3>
-      <h3>
-        Main: {main} oraz {desctription}
-      </h3>
-      <h3>Icon {icon}</h3>
-      <h3>Kraj: {country}</h3>
-      <h3>
-        wschód o: {sunset} zachów {sunrise}
-      </h3>{" "}
+      <img src={iconSrc} alt="icon" />
+      <h1 className="main">
+        {city} / {country}
+      </h1>
+      <h2 className="temp result-text">{temp.toFixed(1)} &#176; C</h2>
+      <h3 className="result-text">{pressure}hPa</h3>
+
+      <h3 className="result-text">wiatr: {wind_speed}m/s</h3>
+
+      <h3 className="result-text">{main}</h3>
     </div>
   );
 };

@@ -1,5 +1,18 @@
+.main {
+  font-size: 3rem;
+}
+
 .Result {
-  width: 100%;
-  grid-column: 1/2;
-  grid-row: 2/4;
+  font-family: "Montserrat", sans-serif;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 3rem;
+  margin: 0 auto;
+  letter-spacing: 0.5rem;
+}
+
+.result-text {
+  margin: 1rem;
+  font-size: 1.6rem;
 }
