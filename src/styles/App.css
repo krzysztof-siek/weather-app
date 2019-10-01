@@ -81,7 +81,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
-  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
   border-radius: 15px;
 }
 
