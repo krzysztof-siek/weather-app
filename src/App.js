@@ -32,7 +32,7 @@ class App extends Component {
       <div
         className="App"
         style={{backgroundImage: `url(${this.state.image})`}}>
-        <Header check={this.checkWeather} />
+        <Header checkWeather={this.checkWeather} />
         {this.state.err ? (
           <h2>Brak danych </h2>
         ) : (

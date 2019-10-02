@@ -35,19 +35,21 @@ class Result extends Component {
 
     return (
       <div className="Result">
-        <img src={iconSrc} alt="icon" />
-        <h1 className="main">
-          {city} / {country}
-        </h1>
-        <h2 className="temp result-text">{temp.toFixed(1)} &#176; C</h2>
-        <h3 className="result-text">{pressure}hPa</h3>
+        <div class="city">
+          <img src={iconSrc} alt="icon" />
+          <h1 className="main">
+            {city} / {country}
+          </h1>
+          <h2 className="temp result-text">{temp.toFixed(0)} &#176; C</h2>
+          <h3 className="result-text">{pressure}hPa</h3>
 
-        <h3 className="result-text">wiatr: {wind_speed}m/s</h3>
+          <h3 className="result-text">wiatr: {wind_speed}m/s</h3>
 
-        <h3 className="result-text">{main}</h3>
-        <button className="hours" onClick={this.checkLongTermWeather}>
-          Prognoza godzinowa
-        </button>
+          <h3 className="result-text">{main}</h3>
+          <button className="showLongTerm" onClick={this.checkLongTermWeather}>
+            Prognoza godzinowa
+          </button>
+        </div>
         <div class="Longterm">{term}</div>
       </div>
     );

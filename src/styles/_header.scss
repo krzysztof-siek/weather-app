@@ -2,15 +2,22 @@
   flex-basis: 20vh;
   border-bottom: 2px solid black;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  .time {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .Header-input {
-  font-size: 2rem;
+  font-size: 1.4rem;
   padding: 0.5rem;
-  margin: 2rem;
+  margin: 1rem;
   text-align: center;
   border-radius: 15px;
   border-style: hidden;

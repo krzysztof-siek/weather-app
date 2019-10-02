@@ -40,11 +40,11 @@ class Header extends Component {
             sunset: data.sys.sunset
           }
         });
-        this.props.check(this.state);
+        this.props.checkWeather(this.state);
       })
       .catch(err => {
         this.setState({err: true, weather: []});
-        this.props.check(this.state);
+        this.props.checkWeather(this.state);
       });
   };
 
@@ -123,7 +123,6 @@ class Header extends Component {
           placeholder="Wpisz miasto"
           onChange={this.inputHandler}
         />
-        <h1>Aplikacja Pogodowa!</h1>
       </div>
     );
   }
