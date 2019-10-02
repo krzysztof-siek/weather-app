@@ -7,12 +7,12 @@ const Longterm = props => {
   const iconSrc2 = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   return (
-    <div class="one">
-      <div class="img">
+    <div className="card">
+      <div className="img">
         <img src={iconSrc2} alt="" />
       </div>
       <p>{props.el.main.temp.toFixed(0)}&#176; C</p>
-      <p class="info">{time < 10 ? `0${time}:00` : `${time}:00`} </p>
+      <p className="info-time">{time < 10 ? `0${time}:00` : `${time}:00`} </p>
     </div>
   );
 };

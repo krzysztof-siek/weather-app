@@ -120,7 +120,7 @@
   }
 }
 
-.one {
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +135,7 @@
   border-top-right-radius: 15px;
 }
 
-.one .info {
+.card .info-time {
   margin-top: 0.4rem;
   background-color: white;
   padding: 0.4rem;

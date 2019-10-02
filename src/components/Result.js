@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Longterm from "./Longterm";
+import City from "./City";
 
 class Result extends Component {
   state = {
@@ -17,40 +18,20 @@ class Result extends Component {
   };
 
   render() {
-    const {
-      temp,
-      pressure,
-      city,
-      wind_speed,
-      main,
-      icon,
-      country
-    } = this.props.weather;
-    const iconSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-
     let term = "";
     if (this.state.lognTerm.length > 1) {
-      term = this.state.lognTerm.slice(0, 10).map(el => <Longterm el={el} />);
+      term = this.state.lognTerm
+        .slice(0, 10)
+        .map(el => <Longterm el={el} key={el.dt} />);
     }
 
     return (
       <div className="Result">
-        <div class="city">
-          <img src={iconSrc} alt="icon" />
-          <h1 className="main">
-            {city} / {country}
-          </h1>
-          <h2 className="temp result-text">{temp.toFixed(0)} &#176; C</h2>
-          <h3 className="result-text">{pressure}hPa</h3>
-
-          <h3 className="result-text">wiatr: {wind_speed}m/s</h3>
-
-          <h3 className="result-text">{main}</h3>
-          <button className="showLongTerm" onClick={this.checkLongTermWeather}>
-            Prognoza godzinowa
-          </button>
-        </div>
-        <div class="Longterm">{term}</div>
+        <City
+          weather={this.props.weather}
+          checkLongTermWeather={this.checkLongTermWeather}
+        />
+        <div className="Longterm">{term}</div>{" "}
       </div>
     );
   }

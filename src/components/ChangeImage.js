@@ -4,7 +4,7 @@ import image4 from "../img/4.jpg";
 import image5 from "../img/5.jpg";
 import image6 from "../img/6.jpg";
 
-const Test = weath => {
+const ChangeImage = weath => {
   if (weath === "Rain") {
     return image3;
   } else if (weath === "Clouds") {
@@ -20,4 +20,4 @@ const Test = weath => {
   }
 };
 
-export default Test;
+export default ChangeImage;

@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-// import Time from "./Time";
 
 const APIKey = "87f583735f7285d1017d75c8c9331a32";
 class Header extends Component {

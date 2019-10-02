@@ -20,7 +20,7 @@
   }
 }
 
-.one {
+.card {
   display: flex;
   flex-direction: column;
   color: black;
@@ -28,7 +28,7 @@
   border: 2px solid white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  .info {
+  .info-time {
     margin-top: 0.4rem;
     background-color: white;
     padding: 0.4rem;

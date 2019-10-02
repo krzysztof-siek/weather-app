@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import Header from "./components/Header";
 import Result from "./components/Result";
-import test from "./components/test";
 import image1 from "./img/1.jpg";
 import "./styles/App.css";
+import ChangeImage from "./components/ChangeImage";
 
 class App extends Component {
   state = {
@@ -17,8 +17,8 @@ class App extends Component {
 
     if (!data.err) {
       this.setState({weather: data.weather, err: false});
-      let testRes = test(this.state.weather.main);
-      this.setState({image: testRes});
+      let image = ChangeImage(this.state.weather.main);
+      this.setState({image});
     } else {
       this.setState({
         weather: [],
@@ -28,13 +28,13 @@ class App extends Component {
   };
 
   render() {
+    let bgc = {backgroundImage: `url(${this.state.image})`};
     return (
-      <div
-        className="App"
-        style={{backgroundImage: `url(${this.state.image})`}}>
+      <div className="App" style={bgc}>
         <Header checkWeather={this.checkWeather} />
+
         {this.state.err ? (
-          <h2>Brak danych </h2>
+          <h2>Wprowadz miasto </h2>
         ) : (
           <Result weather={this.state.weather} />
         )}
