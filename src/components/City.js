@@ -2,7 +2,7 @@ import React from "react";
 
 const City = props => {
   const {icon, city, country, temp, pressure, wind_speed, main} = props.weather;
-  const iconSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  const iconSrc = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   return (
     <div className="city">
       <img src={iconSrc} alt="icon" />

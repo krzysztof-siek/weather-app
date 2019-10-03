@@ -15,7 +15,7 @@ class Header extends Component {
   };
 
   weatherRequest = () => {
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.input}&APPID=${APIKey}&units=metric`;
+    const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.input}&APPID=${APIKey}&units=metric`;
     fetch(API)
       .then(respond => respond.json())
       .then(data => {

@@ -4,7 +4,7 @@ const Longterm = props => {
   let t = new Date(props.el.dt * 1000);
   let time = t.getHours();
   let icon = props.el.weather[0].icon;
-  const iconSrc2 = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  const iconSrc2 = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
   return (
     <div className="card">

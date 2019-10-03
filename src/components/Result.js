@@ -11,7 +11,7 @@ class Result extends Component {
     let longTermCity = this.props.weather.city;
     let APIKey = "87f583735f7285d1017d75c8c9331a32";
     fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${longTermCity}&APPID=${APIKey}&units=metric`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${longTermCity}&APPID=${APIKey}&units=metric`
     )
       .then(respond => respond.json())
       .then(json => this.setState({lognTerm: json.list}));
