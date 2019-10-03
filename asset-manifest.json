@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/weather-app/static/css/main.10d55c0c.chunk.css",
+    "main.js": "/weather-app/static/js/main.88bc0aae.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.88bc0aae.chunk.js.map",
+    "runtime~main.js": "/weather-app/static/js/runtime~main.d3941183.js",
+    "runtime~main.js.map": "/weather-app/static/js/runtime~main.d3941183.js.map",
+    "static/js/2.6664829a.chunk.js": "/weather-app/static/js/2.6664829a.chunk.js",
+    "static/js/2.6664829a.chunk.js.map": "/weather-app/static/js/2.6664829a.chunk.js.map",
+    "index.html": "/weather-app/index.html",
+    "precache-manifest.12eaeb61756d502267cfbe66f9b7b985.js": "/weather-app/precache-manifest.12eaeb61756d502267cfbe66f9b7b985.js",
+    "service-worker.js": "/weather-app/service-worker.js",
+    "static/css/main.10d55c0c.chunk.css.map": "/weather-app/static/css/main.10d55c0c.chunk.css.map",
+    "static/media/1.jpg": "/weather-app/static/media/1.b9d13c71.jpg",
+    "static/media/2.jpg": "/weather-app/static/media/2.3f3986a1.jpg",
+    "static/media/3.jpg": "/weather-app/static/media/3.b288b413.jpg",
+    "static/media/4.jpg": "/weather-app/static/media/4.895d66ce.jpg",
+    "static/media/5.jpg": "/weather-app/static/media/5.3a70ab55.jpg",
+    "static/media/6.jpg": "/weather-app/static/media/6.a4ce229a.jpg"
+  }
+}
